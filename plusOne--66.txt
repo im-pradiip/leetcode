@@ -1,0 +1,41 @@
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) {
+        int len=digits.size();
+        vector<int>res;
+        if(len==0)
+            res.push_back(1);
+       
+        int  num;
+        int carry=0;
+        for(int i=len-1;i>=0;i--){
+            if(i==len-1){
+                num=digits[i]+1;
+                if(num>9){
+                    res.push_back(10-num);
+                    carry=1;
+                }
+                else{
+                    res.push_back(num);
+                    carry=0;
+                }
+            }
+            else{
+                num=digits[i]+carry;
+                if(num>9){
+                    res.push_back(10-num);
+                    carry=1;
+                }
+                else{
+                    res.push_back(num);
+                    carry=0;
+                }
+            }
+            
+        }
+        if(carry==1)
+            res.push_back(1);
+        reverse(res.begin(),res.end());
+        return res;
+    }
+};
