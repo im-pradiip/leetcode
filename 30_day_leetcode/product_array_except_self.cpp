@@ -21,6 +21,7 @@ public:
         for(int i=nums.size()-2;i>=0;i--){
             rightproduct[i]=nums[i+1]*rightproduct[i+1];
         }
+        //final
         // productarray= 0 0 0 48 0
         for(int i=0;i<nums.size();i++){
             productarray[i]=rightproduct[i]*leftproduct[i];
