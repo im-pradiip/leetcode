@@ -27,5 +27,6 @@ public:
             productarray[i]=rightproduct[i]*leftproduct[i];
         }
         return productarray;
+        //
     }
 };
