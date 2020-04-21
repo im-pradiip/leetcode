@@ -20,7 +20,7 @@ public:
         
         // now by applying from i=1 to row-1
         //                      j=1 to col-1
-        //                      res[i][j]=gris[i][j]+min(res[i-1][j],res[i][j-1]);
+        //                      res[i][j]=grid[i][j]+min(res[i-1][j],res[i][j-1]);
         
         //final res matrix is  2 5 9  14
         //                     3 6 11 17
